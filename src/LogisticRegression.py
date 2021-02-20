@@ -20,11 +20,10 @@ def main():
     print('main')
     df_train = pd.read_csv(osp.join('..' , 'data' , '20_News' , '20_News_Train_Preprocessed.csv') , index_col=False)
     df_test = pd.read_csv(osp.join('..', 'data', '20_News', '20_News_Test_Preprocessed.csv'), index_col=False)
-    df_train = df_train.drop(df_train.columns[[0]] , axis=1)
     print(df_train)
 
 
-    tv = TfidfVectorizer(max_df=1., min_df=3, max_features=20000)
+    tv = TfidfVectorizer(max_df=1., min_df=3, max_features=15000)
 
 
 
